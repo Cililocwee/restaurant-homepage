@@ -1,0 +1,88 @@
+body, html {
+    min-height: 100%;
+    margin: 0;
+    margin-top: -1%;
+    --highlights: #351431;
+    --edges: #775253;
+    --emphasis: #bdc696;
+    --inner-background: #d1d3c4;
+    --basis: #dfe0dc;
+    background-color: var(--basis);
+}
+
+/* Header and friends*/
+.header {
+    grid-column: 1/4;
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-image: url('../assets/cafe-splash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-end;
+}
+
+.header-attribution {
+    background-color: lightgray;
+    opacity: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: .75em;
+}
+
+
+/* introduction */
+.introduction {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+/* main content*/ 
+#content {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+/* Navbar */
+.navigationbar {
+    display: flex;
+    justify-content: center;
+    grid-row: 2;
+    grid-column: 1/4;
+    gap: 5px;
+}
+
+.navigationbar button {
+    background-color: var(--edges);
+    width: 200px;
+    height: 50px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 2em;
+    align-items: center;
+    border-top: none;
+}
+
+.navigationbar button:hover {
+    background-color: var(--emphasis);
+}
+
+.home-blurb {
+    border: 4px solid var(--edges);
+    max-width: 75%;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    background: var(--inner-background);
+}
+
+.home-blurb:has(h3) {
+    text-align: center;
+}
